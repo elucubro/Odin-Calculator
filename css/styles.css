@@ -1,0 +1,47 @@
+html, body {
+    min-height: 100%;
+}
+body {
+    height: 100vh;
+    background-color: #BFC3BA;
+}
+
+.calcContainer {
+    background-color: #3F3244;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 90vh;
+    width: 45vh;
+    border-radius: 5vh;
+    border: 1vh;
+    border-style: solid;
+    border-color: #2F2235;
+    margin: auto;
+    padding: 1vh;
+    gap: 2vh;
+}
+
+.calcScreen {
+    background-color: #BFC3BA;
+    border-style: solid;
+    border-color: #A9ACA9;
+    border: 10px;
+    border-radius: 5vh;
+    display: grid;
+    grid-row: 1 / 1 ;
+    grid-column: 1 / span 4;
+    box-sizing: border-box;
+}
+
+.buttonContainer {
+    background-color: #2F2235;
+    border-style: solid;
+    border-color: #A9ACA9;
+    border: 10px;
+    border-radius: 5vh;
+    display: grid;
+    grid-row: 2 / span 5 ;
+    grid-column: 1 / span 4;
+    box-sizing: border-box;
+}
