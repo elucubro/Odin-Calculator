@@ -42,10 +42,10 @@ const calculator = [];
 // Function to be used on number press
 function numberAppend(num) {
     let numString = num.toString();
-    let calc = calculator.length;
-    let calcTakeOne = calc-1;
+    let calcLength = calculator.length;
+    let calcTakeOne = calcLength-1;
     // calculator.length is the amount of items in array
-    if (calculator.length == 0 || 2) {
+    if (calcLength == 0 || calcLength == 2) {
         calculator.push(numString)
     } 
     else {
@@ -54,6 +54,44 @@ function numberAppend(num) {
     }
 
 }
+// ExpressionEvaluation
+function evaluateExpression() {
+    let operator = calculator[1]
+
+    let operandOne = parseFloat(calculator[0]);
+    let operandTwo = parseFloat(calculator[2]);
+    console.log(operator)
+    console.log(parseFloat(calculator[0]))
+    console.log(parseFloat(calculator[2]))
+    if (operator == "*") {
+        return operandOne * operandTwo;
+    }
+    if (operator == "/") {
+        return operandOne / operandTwo;
+    }
+    if (operator == "+") {
+        return operandOne + operandTwo;
+    }
+    if (operator == "-") {
+        return operandOne - operandTwo;
+    } 
+}
+
+// Operation Appending
+function operationAppend(op) {
+    let calcLength = calculator.length;
+
+    if (calcLength == 1) {
+        calculator.push(op)
+    }
+    if (calcLength == 3) {
+        calculator.length = 0
+        calculator.push(evaluateExpression())
+        calculator.push(op)
+        evaluateExpression()
+    }
+}
+
 
 /* psuedo code - idea for system
 
