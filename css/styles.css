@@ -1,3 +1,9 @@
+@font-face 
+{ 
+font-family: "DSEG7Classic";  
+src: url("/Repositories/Odin-Calculator/font/DSEG7ClassicMini-Regular.woff2")format("woff2"); 
+}
+
 html, body {
     min-height: 100%;
 }
@@ -22,16 +28,35 @@ body {
     gap: 2vh;
 }
 
+.currentOperationDiv {
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+.previousOperationDiv {
+    font-size: 1rem;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .calcScreen {
-    background-color: #BFC3BA;
+    padding: 20px;
+    gap: 3vh;
+    background-color: #000000;
     border-style: solid;
     border-color: #A9ACA9;
     border: 10px;
     border-radius: 5vh;
-    display: grid;
+    /* Flexbox Fuckery */
+    display: flex;
+    flex-direction: column;
+    /* Grid Fuckery */
     grid-row: 1 / 1 ;
     grid-column: 1 / span 4;
     box-sizing: border-box;
+    font-family: 'DSEG7Classic';
 }
 
 .buttonContainer {
