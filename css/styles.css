@@ -68,5 +68,37 @@ body {
     display: grid;
     grid-row: 2 / span 5 ;
     grid-column: 1 / span 4;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     box-sizing: border-box;
+    padding: 2vh;
+}
+
+.numberButton {
+    background-color: rgb(201, 201, 201);
+    display: grid;
+    text-align: center;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.button1 {
+    background-color: rgb(201, 201, 201);
+    display: grid;
+    text-align: center;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.operationButton {
+    display: grid;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.span2 {
+    grid-column: span 2;
 }
